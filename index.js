@@ -30,6 +30,19 @@ app.get("/alunos", (req, res) => {
     ])
 })
 
+
+app.get("/aluno", (req, res) => {
+   res.json({
+       nome: process.env.NOME,
+       idade: process.env.IDADE,
+       cidade:process.env.CIDADE
+       
+   })
+})
+
+
+
 app.listen(PORT, () => {
     console.log(`rodando em http://localhost:${PORT}`)
 })
+
